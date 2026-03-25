@@ -29,4 +29,18 @@ export class AppModule implements NestModule {
       )
       .forRoutes(CatsController);
   }
+
+  /* Function middleware apply method
+  
+  consumer
+  .apply(logger)
+  .forRoutes(CatsController);
+  */
+
+  /* Function middleware apply with multiple middleware method
+  
+  consumer
+  .apply(cors(), helmet(), logger)
+  .forRoutes(CatsController);
+  */
 }
